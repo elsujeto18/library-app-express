@@ -1,7 +1,7 @@
 'use strict';
 
 import mongoose from 'mongoose';
-import bcrypt from 'bcrypt'
+
 
 var ApplicationSchema = new mongoose.Schema({
     name: {
