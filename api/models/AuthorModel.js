@@ -1,6 +1,6 @@
 'use strict';
 import mongoose from 'mongoose';
-import bcrypt from 'bcrypt'
+
 
 var AuthorSchema = new mongoose.Schema({
     name: {
@@ -21,7 +21,7 @@ var AuthorSchema = new mongoose.Schema({
     },
     
 }, {strict: false});
-const model = mongoose.model('Authors', AuthorSchema);
+const model = mongoose.model('Author', AuthorSchema);
 
 export const schema = model.schema;
 export default model;
