@@ -1,6 +1,6 @@
 'use strict';
 import mongoose from 'mongoose';
-import bcrypt from 'bcrypt'
+
 
 var BookSchema = new mongoose.Schema({
     title: {
@@ -14,7 +14,7 @@ var BookSchema = new mongoose.Schema({
     author: {
         type: [{
             type: mongoose.Schema.Types.ObjectId,
-            ref: 'Authors'
+            ref: 'Author'
         }]
     },
 
