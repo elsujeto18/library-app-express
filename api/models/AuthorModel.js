@@ -1,5 +1,3 @@
-// model for author
-
 'use strict';
 import mongoose from 'mongoose';
 import bcrypt from 'bcrypt'
@@ -22,7 +20,7 @@ var AuthorSchema = new mongoose.Schema({
         required: 'Kindly enter the nacionality of the author'
     },
     
-});
+}, {strict: false});
 const model = mongoose.model('Authors', AuthorSchema);
 
 export const schema = model.schema;

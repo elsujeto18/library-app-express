@@ -1,5 +1,5 @@
-//model for applications
 'use strict';
+
 import mongoose from 'mongoose';
 import bcrypt from 'bcrypt'
 
@@ -12,10 +12,10 @@ var ApplicationSchema = new mongoose.Schema({
         type: Date,
         default: Date.now
     },
-    detail : {
+    detail : [{
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'ApplicationDetails'
-    },
+        ref: 'Books'
+    }],
     date_return: {
         type: Date,
         required: 'Kindly enter the date of return of the application'

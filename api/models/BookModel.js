@@ -29,7 +29,7 @@ var BookSchema = new mongoose.Schema({
         }],
         default: ['Available']
     }
-});
+}, {strict: false});
 
 
 const model = mongoose.model('Books', BookSchema);
