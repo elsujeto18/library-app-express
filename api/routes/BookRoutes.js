@@ -1,12 +1,16 @@
 'use strict'
 
 import express from 'express';
-import {getBooks} from '../controllers/BookController.js';
+import {getBooks,postBook,deleteBook, updateBook} from '../controllers/BookController.js';
 
 const router = express.Router();
 
 router.route('/')
-    .get(getBooks);
+    .get(getBooks)
+    .post(postBook);
     
+router.route('/:id')
+    .put(updateBook)
+    .delete(deleteBook);
 
 export const bookRoutes = router;
