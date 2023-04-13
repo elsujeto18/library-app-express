@@ -11,9 +11,9 @@ var AuthorSchema = new mongoose.Schema({
         type: Date,
         default: Date.now
     },
-    birthdate: {
-        type: Date,
-        required: 'Kindly enter the birthdate of the author'
+    age: {
+        type: Number,
+        required: 'Kindly enter the age of the author'
     },
     nacionality: {
         type: String,
