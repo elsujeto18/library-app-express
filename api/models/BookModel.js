@@ -23,11 +23,10 @@ var BookSchema = new mongoose.Schema({
         required: 'Kindly enter the genre of the book'
     },
     disponibility: {
-        type: [{
-            type: String,
-            enum: ['Available', 'Unavailable']
-        }],
-        default: ['Available']
+    
+        type: String,
+        enum: ['Available', 'Unavailable'],
+        default: 'Available'
     }
 }, {strict: false});
 

@@ -3,7 +3,7 @@ import BookModel from '../models/BookModel.js';
 
 const getBooks = async (req, res, next) => {
     try{
-        const book = await BookModel.find();
+        const book = await BookModel.find().populate('author');
         console.log(book);
         res.status(200).json(book);
     }catch(err){
