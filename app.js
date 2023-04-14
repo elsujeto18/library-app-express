@@ -3,6 +3,7 @@ import dotenv from 'dotenv'
 import bodyParser from 'body-parser'
 import {authorRoutes} from './api/routes/AuthorRoutes.js'
 import {bookRoutes} from './api/routes/BookRoutes.js'
+import {applicationRoutes} from './api/routes/ApplicationRoutes.js'
 import initMongoDBConnection from './api/config/mongoose.js'
 const app = express()
 const port = 3000
@@ -20,6 +21,7 @@ app.get('/', function (req, res) {
 
 app.use('/authors',authorRoutes)
 app.use('/books',bookRoutes)
+app.use('/applications',applicationRoutes)
 
 try{
   await initMongoDBConnection()

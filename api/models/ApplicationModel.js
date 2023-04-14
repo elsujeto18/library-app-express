@@ -2,7 +2,7 @@
 
 import mongoose from 'mongoose';
 
-
+// el name deberia cambiarse por un numero de ticker aleatorio
 var ApplicationSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -24,10 +24,12 @@ var ApplicationSchema = new mongoose.Schema({
         type: String
     },
     status: {
+        
         type: String,
         enum: ['Active', 'Inactive'],
-        default: ['Active']
+        default: 'Active' 
     }
+
 });
 
 const model = mongoose.model('Applications', ApplicationSchema);
